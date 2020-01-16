@@ -2,13 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:news_reader/constant.dart';
-import 'package:news_reader/home_screen.dart';
 import 'package:news_reader/rss_service.dart';
 import 'package:news_reader/webview.dart';
 
 class NewsScreen extends StatelessWidget {
   final String companyLink;
-  HomeScreen _homeScreen = HomeScreen();
 
   NewsScreen({this.companyLink});
 
@@ -50,7 +48,7 @@ class NewsScreen extends StatelessWidget {
                                 MaterialPageRoute(builder: (context) =>
                                     MyWebView(
                                       title: 'Haber İçeriği', selectedUrl
-                                        :snapshot.data[index].getWebLink,)));;
+                                        :snapshot.data[index].getWebLink,)));
 
 
 
@@ -75,7 +73,7 @@ class NewsScreen extends StatelessWidget {
                     return Container();
                     break;
                   case ConnectionState.none:
-                    return Container(child:Text("awdawd"));
+                    return Container(child:Text("Veri Yok"));
                     break;
                   case ConnectionState.waiting:
                     return LinearProgressIndicator();
