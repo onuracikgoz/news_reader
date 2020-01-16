@@ -32,7 +32,7 @@ get getTitle => _title;
         return splitDescription[1].replaceAll("<br />"," ").replaceAll("/>"," ").substring(1,100) + "...";
       }
 else {
-  return _description.substring(1,60) + "...";
+  return _description.substring(0,60) + "...";
 }
 
   }
