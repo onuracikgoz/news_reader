@@ -19,7 +19,23 @@ get getTitle => _title;
     _imgUrl = value;
   }
 
-  get getDescription => _description;
+  get getDescription {
+
+
+
+
+    if(_description.contains("alt="))
+      {
+        List splitDescription = _description.split("alt=");
+
+
+        return splitDescription[1].replaceAll("<br />"," ").replaceAll("/>"," ").substring(1,100) + "...";
+      }
+else {
+  return _description.substring(1,60) + "...";
+}
+
+  }
 
   set setDescription(value) {
     _description = value;

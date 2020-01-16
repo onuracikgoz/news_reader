@@ -13,11 +13,11 @@ class RssService {
     var rssFeed = new RssFeed.parse(data.body);
     String imgUrl ;
     for (int i = 0; i < rssFeed.items.length; i++) {
-      print("Başlık:" + rssFeed.items[i].title);
-      print("Açıklama:" + rssFeed.items[i].description);
-      print("Link:" + rssFeed.items[i].link);
-      print("Foto Url" + rssFeed.items[i].enclosure.url);
-      print("\n");
+     // print("Başlık:" + rssFeed.items[i].title);
+     // print("Açıklama:" + rssFeed.items[i].description);
+      //print("Link:" + rssFeed.items[i].link);
+      //print("Foto Url" + rssFeed.items[i].enclosure.url);
+      //print("\n");
       imgUrl = rssFeed.items[i].enclosure.url;
       if(imgUrl==null){
 
