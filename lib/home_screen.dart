@@ -2,6 +2,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:news_reader/company_card.dart';
+import 'package:news_reader/constant.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -33,19 +34,12 @@ Container buildContainer() {
       width: 250.0,
       child: ScaleAnimatedTextKit(
         totalRepeatCount: 50,
-          onTap: () {
-            print("Tap Event");
-          },
           text: [
             "GÜNCEL",
             "HABERLER",
 
           ],
-          textStyle: TextStyle(
-            color: Colors.black,
-              fontSize: 55.0,
-              fontFamily: "Bebas"
-          ),
+          textStyle: animationTitle,
           textAlign: TextAlign.center,
           alignment: AlignmentDirectional.center // or Alignment.topLeft
       ),
